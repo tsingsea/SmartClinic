@@ -1,0 +1,20 @@
+{% extends 'base_generic.html' %}
+
+{% block content %}
+ <h1>{{ clinic.name }}</h1>
+  <p>地址: {{ clinic.address }}</p>
+  <p>法定代表人: {{ clinic.legal_representative }}</p>
+  <p>主要负责人: {{ clinic.principal }}</p>
+  <p>诊疗科目: {{ clinic.medical_subjects }}</p>
+  <p>服务方式: {{ clinic.service_mode }}</p>
+  <p>备案编号: {{ clinic.record_number }}</p>
+  <p>所有制形式: {{ clinic.ownership_form }}</p>
+  <p>经营性质: {{ clinic.business_nature }}</p>
+  <p>行政审批机关: {{ clinic.administrative_approval }}</p>
+  <p>备案日期: {{ clinic.record_date }}</p>
+  <p>备案有效期: {{ clinic.record_validity_period }} 月</p>
+  <p>备案到期: {{ clinic.record_expiry_date }}</p>
+
+  <a href="{% url 'clinic_edit' pk=clinic.pk %}">编辑</a>
+  <a href="{% url 'clinic_list' %}
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends 'base_generic.html' %}
+
+{% block content %}
+  <h1>诊所列表</h1>
+  <ul>
+    {% for clinic in clinics %}
+      <li><a href="{% url 'clinic_detail' pk=clinic.pk %}">{{ clinic.name }}</a></li>
+    {% endfor %}
+  </ul>
+  <a href="{% url 'clinic_new' %}">新增诊所</a>
+{% endblock %}
